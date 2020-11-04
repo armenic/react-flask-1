@@ -1,3 +1,14 @@
+# My Stuff
+
+In PyCharm one can have different configurations:
+- flask app
+- npm start
+- npm build
+
+I can start flask app, then npm start and easily develop in `src` for React,
+later npm build, commit and push, heroku deploy
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
