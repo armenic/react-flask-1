@@ -4,11 +4,11 @@ import './App.css';
 
 function App() {
 
-    const [currentTime, setCurrentTime] = useState(0);
+    const [currentZen, setCurrentZen] = useState("");
 
     useEffect(() => {
-        fetch('/api/time').then(res => res.json()).then(data => {
-            setCurrentTime(data.time);
+        fetch('/api/zen').then(res => res.json()).then(data => {
+            setCurrentZen(data.time);
         });
     }, []);
 
@@ -28,7 +28,7 @@ function App() {
                 >
                     Learn React
                 </a>
-                <p>The current time is {currentTime}.</p>
+                <p>Random Python Zen: {currentZen}.</p>
             </header>
         </div>
     );
