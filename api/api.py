@@ -1,4 +1,3 @@
-import time
 from flask import Flask
 from contextlib import redirect_stdout
 import io
