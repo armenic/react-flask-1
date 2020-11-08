@@ -20,4 +20,4 @@ def index():
 @app.route('/api/zen')
 def get_random_zen():
 
-    return {'time': random.choice(s1)}
+    return {'zen': random.choice(s1)}
