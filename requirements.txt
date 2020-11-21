@@ -1,4 +1,6 @@
 # /requirements.txt
+# do not pay attention to PyCharms warnings about not installed
+# most of these are gunicorn deps which we do not need locally
 astroid==2.4.2
 attrs==19.3.0
 backcall==0.2.0
