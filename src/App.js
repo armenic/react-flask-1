@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import LoginButton from "./components/Login.js";
 import LogoutButton from "./components/Logout";
-import Profile from "./components/Profile";
-import Profile_from_api from "./components/Profile_from_api";
+import ProfileFromApi from "./components/Profile_from_api";
+import ZenFromApi from "./components/Zen_from_api";
 
 function App() {
 
@@ -28,8 +28,7 @@ function App() {
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
                 <p>v 3.0 with auth</p>
-                {/*<Profile />*/}
-                <Profile_from_api/>
+                <ProfileFromApi/>
                 <a
                     className="App-link"
                     href="https://reactjs.org"
@@ -38,7 +37,8 @@ function App() {
                 >
                     Learn React
                 </a>
-                <p>Random Python Zen: {currentZen}.</p>
+                <p>Random Python Zen from Public API: {currentZen}.</p>
+                <ZenFromApi/>
             </header>
         </div>
     );
