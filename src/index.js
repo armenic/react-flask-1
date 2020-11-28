@@ -3,12 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Auth0Provider} from "@auth0/auth0-react";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <Auth0Provider
+        domain="english-apps.us.auth0.com"
+        clientId="aHGX8oWUwcKnSf1vHjVNWfvkrEfhovcT"
+        redirectUri={window.location.origin}
+        audience="https//englishrealm.ca"
+        scope="read:messages"
+    >
+        <App/>
+    </Auth0Provider>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,6 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import LoginButton from "./components/Login.js";
+import LogoutButton from "./components/Logout";
+import ProfileFromApi from "./components/Profile_from_api";
+import ZenFromApi from "./components/Zen_from_api";
 
 function App() {
 
@@ -8,7 +12,7 @@ function App() {
 
     useEffect(() => {
         fetch('/api/zen').then(res => res.json()).then(data => {
-            setCurrentZen(data.time);
+            setCurrentZen(data.zen);
         });
     }, []);
 
@@ -16,10 +20,15 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo"/>
+
+                <LoginButton />
+                <LogoutButton />
+
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
-                <p>v 2.0</p>
+                <p>v 3.0 with auth</p>
+                <ProfileFromApi/>
                 <a
                     className="App-link"
                     href="https://reactjs.org"
@@ -28,7 +37,8 @@ function App() {
                 >
                     Learn React
                 </a>
-                <p>Random Python Zen: {currentZen}.</p>
+                <p>Random Python Zen from Public API: {currentZen}.</p>
+                <ZenFromApi/>
             </header>
         </div>
     );
